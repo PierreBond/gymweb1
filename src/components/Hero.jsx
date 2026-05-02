@@ -7,15 +7,7 @@ const Hero = ({ onJoinClick }) => {
       {/* Background Image with V-Split Overlay */}
       <div className="absolute inset-0 bg-[url('/assets/images/hero.jpg')] bg-cover bg-center opacity-60 grayscale" role="img" aria-label="High performance athlete training"></div>
       
-      {/* V-Shape Clipping Overlay */}
-      <div className="absolute inset-0 z-10 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black"></div>
-        {/* The V-shape lines */}
-        <div className="absolute top-0 left-0 w-full h-full">
-           <div className="absolute top-0 left-0 w-full h-full bg-primary-container/20 mix-blend-overlay clip-v-shape"></div>
-           <div className="absolute top-0 left-0 w-full h-full border-[20px] border-primary-container/30 clip-v-outline"></div>
-        </div>
-      </div>
+     
 
       <div className="relative z-20 w-full max-w-7xl mx-auto px-6 pt-20">
         <div className="flex flex-col items-center text-center">
