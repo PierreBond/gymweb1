@@ -13,7 +13,7 @@ const InstagramGrid = () => {
     <section className="bg-black py-0">
       <div className="grid grid-cols-2 md:grid-cols-5 gap-0">
         {images.map((img, index) => (
-          <div key={index} className="aspect-square relative group overflow-hidden border-r border-white/5 last:border-0">
+          <div key={index} className={`aspect-square relative group overflow-hidden border-r border-white/5 last:border-0 ${index === 2 ? 'hidden md:flex' : 'flex'}`}>
             {img ? (
               <>
                 <img src={img} alt="Insta" className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" />

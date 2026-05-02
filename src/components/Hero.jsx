@@ -26,12 +26,12 @@ const Hero = ({ onJoinClick }) => {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="relative"
           >
-            <h1 className="font-condensed text-[12vw] lg:text-[160px] text-white leading-[0.85] uppercase tracking-tighter italic">
+            <h1 className="font-condensed text-[15vw] md:text-[12vw] lg:text-[160px] text-white leading-[0.85] uppercase tracking-tighter italic">
               GET <br />
               <span className="text-primary-container drop-shadow-[0_0_30px_rgba(230,28,93,0.5)]">ARMOURED</span>
             </h1>
             {/* Outline text overlay for depth */}
-            <h1 className="absolute top-0 left-0 font-condensed text-[12vw] lg:text-[160px] text-transparent leading-[0.85] uppercase tracking-tighter italic border-text-white opacity-20 pointer-events-none" style={{ WebkitTextStroke: '2px white' }}>
+            <h1 className="absolute top-0 left-0 font-condensed text-[15vw] md:text-[12vw] lg:text-[160px] text-transparent leading-[0.85] uppercase tracking-tighter italic border-text-white opacity-20 pointer-events-none" style={{ WebkitTextStroke: '2px white' }}>
               GET <br />
               ARMOURED
             </h1>
@@ -41,7 +41,7 @@ const Hero = ({ onJoinClick }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="font-body text-secondary mt-8 max-w-xl text-sm md:text-base uppercase tracking-[0.2em]"
+            className="font-body text-secondary mt-8 max-w-xl text-[11px] md:text-sm uppercase tracking-[0.2em] px-4 md:px-0 leading-relaxed"
           >
             Our elite training facility provides the tools to armor yourself both mind and body. 
             Shatter your limits and become the best version of yourself.
@@ -55,7 +55,7 @@ const Hero = ({ onJoinClick }) => {
           >
             <button 
               onClick={onJoinClick}
-              className="bg-white text-black font-condensed text-2xl px-12 py-4 hover:bg-primary-container hover:text-white transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.2)]"
+              className="bg-white text-black font-condensed text-xl md:text-2xl px-8 md:px-12 py-3 md:py-4 hover:bg-primary-container hover:text-white transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.2)]"
             >
               LEARN MORE
             </button>

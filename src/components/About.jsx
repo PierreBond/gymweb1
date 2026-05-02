@@ -3,11 +3,10 @@ import { motion } from 'framer-motion';
 
 const About = () => {
   return (
-    <section className="relative py-32 bg-white overflow-hidden" id="programs">
-      {/* Decorative Diamond Shapes */}
-      <div className="absolute top-20 left-[10%] w-16 h-16 border-4 border-primary-container rotate-45 opacity-20"></div>
-      <div className="absolute bottom-20 right-[15%] w-24 h-24 border-4 border-black rotate-45 opacity-10"></div>
-      <div className="absolute top-1/2 right-[5%] w-12 h-12 border-4 border-primary-container rotate-45 opacity-30"></div>
+    <section className="relative py-20 md:py-32 bg-white overflow-hidden" id="programs">
+      {/* Decorative Diamond Shapes - Hidden on small mobile */}
+      <div className="absolute top-10 left-[5%] w-8 h-8 md:w-16 md:h-16 border-2 md:border-4 border-primary-container rotate-45 opacity-20 hidden xs:block"></div>
+      <div className="absolute bottom-10 right-[5%] w-12 h-12 md:w-24 md:h-24 border-2 md:border-4 border-black rotate-45 opacity-10 hidden xs:block"></div>
 
       <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
         <motion.div
@@ -17,13 +16,13 @@ const About = () => {
           transition={{ duration: 0.6 }}
           className="flex flex-col items-center"
         >
-          <span className="font-script text-black text-4xl mb-2 transform -rotate-2">
+          <span className="font-script text-black text-2xl md:text-4xl mb-2 transform -rotate-2">
             For Session Booking
           </span>
-          <h2 className="font-condensed text-6xl md:text-8xl lg:text-[100px] text-black leading-[0.9] uppercase italic tracking-tighter mb-4">
-            BOOK A <span className="text-primary-container">CONSULT</span>
+          <h2 className="font-condensed text-5xl md:text-8xl lg:text-[100px] text-black leading-[0.9] uppercase italic tracking-tighter mb-4">
+            BOOK A <br className="md:hidden" /> <span className="text-primary-container">CONSULT</span>
           </h2>
-          <p className="font-body text-secondary text-base md:text-lg uppercase tracking-[0.2em] max-w-2xl mb-12">
+          <p className="font-body text-secondary text-sm md:text-lg uppercase tracking-[0.2em] max-w-2xl mb-8 md:mb-12">
             Connect with coaches online, book workouts and classes with ease. Your transformation starts with a conversation.
           </p>
           

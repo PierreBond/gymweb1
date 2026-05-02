@@ -40,23 +40,23 @@ const ClassesGrid = () => {
               className="relative group"
             >
               {/* Thick Border Container */}
-              <div className={`relative z-10 border-[12px] ${item.color} bg-white p-8 h-[300px] flex flex-col justify-center overflow-hidden transition-transform duration-500 group-hover:-translate-y-2`}>
+              <div className={`relative z-10 border-[8px] md:border-[12px] ${item.color} bg-white p-6 md:p-8 h-[250px] md:h-[300px] flex flex-col justify-center overflow-hidden transition-transform duration-500 group-hover:-translate-y-2`}>
                 <div className="relative z-20">
-                  <h3 className="font-condensed text-6xl text-black leading-none uppercase italic italic tracking-tighter">
+                  <h3 className="font-condensed text-5xl md:text-6xl text-black leading-none uppercase italic tracking-tighter">
                     {item.title}
                   </h3>
-                  <p className="font-body text-secondary text-sm uppercase tracking-widest mt-2">{item.subtitle}</p>
+                  <p className="font-body text-secondary text-xs md:text-sm uppercase tracking-widest mt-2">{item.subtitle}</p>
                 </div>
                 
-                {/* Breakout Image */}
-                <div className="absolute -right-10 -bottom-10 w-[200px] h-[200px] opacity-20 group-hover:opacity-40 transition-opacity duration-500">
+                {/* Breakout Image - Adjusted for Mobile */}
+                <div className="absolute -right-4 -bottom-4 md:-right-10 md:-bottom-10 w-[150px] h-[150px] md:w-[200px] md:h-[200px] opacity-30 md:opacity-20 group-hover:opacity-50 transition-opacity duration-500">
                    <img src={item.image} alt={item.title} className="w-full h-full object-cover grayscale" />
                 </div>
               </div>
 
-              {/* Icon Overlay */}
-              <div className="absolute -top-6 -left-6 z-30 w-16 h-16 bg-primary-container flex items-center justify-center text-white rotate-45 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                <span className="material-symbols-outlined -rotate-45 text-2xl font-bold">{item.icon}</span>
+              {/* Icon Overlay - Adjusted for Mobile */}
+              <div className="absolute -top-4 -left-4 md:-top-6 md:-left-6 z-30 w-12 h-12 md:w-16 md:h-16 bg-primary-container flex items-center justify-center text-white rotate-45 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <span className="material-symbols-outlined -rotate-45 text-xl md:text-2xl font-bold">{item.icon}</span>
               </div>
             </motion.div>
           ))}

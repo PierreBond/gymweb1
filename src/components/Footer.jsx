@@ -24,10 +24,10 @@ const Footer = ({ onJoinClick }) => {
 
           {/* Central Coming Soon Diamond */}
           <div className="flex justify-center order-first md:order-none">
-            <div className="relative w-64 h-64 border-4 border-white flex flex-col items-center justify-center rotate-45 bg-primary-container shadow-2xl">
+            <div className="relative w-48 h-48 md:w-64 md:h-64 border-4 border-white flex flex-col items-center justify-center rotate-45 bg-primary-container shadow-2xl">
               <div className="rotate-[-45deg] text-center">
-                <span className="font-body text-[10px] text-white/80 uppercase tracking-widest block mb-1">Our Online Store</span>
-                <h3 className="font-condensed text-4xl text-white uppercase italic leading-none">COMING <br />SOON...</h3>
+                <span className="font-body text-[8px] md:text-[10px] text-white/80 uppercase tracking-widest block mb-1">Our Online Store</span>
+                <h3 className="font-condensed text-2xl md:text-4xl text-white uppercase italic leading-none">COMING <br />SOON...</h3>
               </div>
             </div>
           </div>
