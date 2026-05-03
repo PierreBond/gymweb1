@@ -1,5 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
+import KineticTypography from './KineticTypography';
 
 const Hero = ({ onJoinClick }) => {
   return (
@@ -11,14 +11,10 @@ const Hero = ({ onJoinClick }) => {
 
       <div className="relative z-20 w-full max-w-7xl mx-auto px-6 pt-20">
         <div className="flex flex-col items-center text-center">
-          <motion.span 
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+          <KineticTypography 
+            text="Get Ready..."
             className="font-script text-primary-container text-4xl mb-[-10px] transform -rotate-6 z-30"
-          >
-            Get Ready...
-          </motion.span>
+          />
           
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
@@ -32,15 +28,10 @@ const Hero = ({ onJoinClick }) => {
             </h1>
           </motion.div>
 
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+          <KineticTypography 
+            text="Our elite training facility provides the tools to armor yourself both mind and body. Shatter your limits and become the best version of yourself."
             className="font-body text-secondary mt-8 max-w-xl text-[11px] md:text-sm uppercase tracking-[0.2em] px-4 md:px-0 leading-relaxed"
-          >
-            Our elite training facility provides the tools to armor yourself both mind and body. 
-            Shatter your limits and become the best version of yourself.
-          </motion.p>
+          />
 
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
