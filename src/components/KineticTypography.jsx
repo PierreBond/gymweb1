@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 
-const KineticTypography = ({ text, className = "" }) => {
+const KineticTypography = ({ text, className = "", justifyClass = "justify-center" }) => {
   const shouldReduceMotion = useReducedMotion();
 
   // Animation variants
@@ -44,7 +44,7 @@ const KineticTypography = ({ text, className = "" }) => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="flex flex-wrap justify-center"
+        className={`flex flex-wrap ${justifyClass}`}
       >
         {words.map((word, wordIndex) => (
           <span

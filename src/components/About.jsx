@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+import KineticTypography from './KineticTypography';
+
 const About = () => {
   return (
     <section className="relative py-20 md:py-32 bg-white overflow-hidden" id="programs">
@@ -16,15 +18,17 @@ const About = () => {
           transition={{ duration: 0.6 }}
           className="flex flex-col items-center"
         >
-          <span className="font-script text-black text-2xl md:text-4xl mb-2 transform -rotate-2">
-            For Session Booking
-          </span>
+          <KineticTypography 
+            text="For Session Booking"
+            className="font-script text-black text-2xl md:text-4xl mb-2 transform -rotate-2"
+          />
           <h2 className="font-condensed text-5xl md:text-8xl lg:text-[100px] text-black leading-[0.9] uppercase italic tracking-tighter mb-4">
             BOOK A <br className="md:hidden" /> <span className="text-primary-container">CONSULT</span>
           </h2>
-          <p className="font-body text-secondary text-sm md:text-lg uppercase tracking-[0.2em] max-w-2xl mb-8 md:mb-12">
-            Connect with coaches online, book workouts and classes with ease. Your transformation starts with a conversation.
-          </p>
+          <KineticTypography 
+            text="Connect with coaches online, book workouts and classes with ease. Your transformation starts with a conversation."
+            className="font-body text-secondary text-sm md:text-lg uppercase tracking-[0.2em] max-w-2xl mb-8 md:mb-12"
+          />
           
           <div className="flex justify-center items-center gap-4">
             <div className="w-12 h-[2px] bg-black/20"></div>

@@ -11,10 +11,9 @@ const Hero = ({ onJoinClick }) => {
 
       <div className="relative z-20 w-full max-w-7xl mx-auto px-6 pt-20">
         <div className="flex flex-col items-center text-center">
-          <KineticTypography 
-            text="Get Ready..."
-            className="font-script text-primary-container text-4xl mb-[-10px] transform -rotate-6 z-30"
-          />
+          <span className="font-script text-primary-container text-4xl mb-[-10px] transform -rotate-6 z-30">
+            Get Ready...
+          </span>
           
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}

@@ -9,10 +9,12 @@ const BannerStrip = () => {
           <KineticTypography 
             text="For More"
             className="font-script text-white text-lg md:text-xl mb-1"
+            justifyClass="justify-center md:justify-end"
           />
           <KineticTypography 
             text="Enquiries"
             className="font-condensed text-2xl md:text-3xl text-white uppercase tracking-widest italic"
+            justifyClass="justify-center md:justify-end"
           />
           <button className="mt-2 border border-white/30 text-white text-[9px] md:text-[10px] uppercase tracking-[0.2em] px-4 py-1 hover:bg-white hover:text-black transition-colors">Get More Details</button>
         </div>
@@ -28,10 +30,12 @@ const BannerStrip = () => {
           <KineticTypography 
             text="Join"
             className="font-script text-white text-lg md:text-xl mb-1"
+            justifyClass="justify-center md:justify-start"
           />
           <KineticTypography 
             text="Armoured"
             className="font-condensed text-2xl md:text-3xl text-white uppercase tracking-widest italic"
+            justifyClass="justify-center md:justify-start"
           />
           <button className="mt-2 bg-primary-container text-white text-[9px] md:text-[10px] uppercase tracking-[0.2em] px-4 py-1 hover:bg-white hover:text-black transition-colors">Join Us</button>
         </div>

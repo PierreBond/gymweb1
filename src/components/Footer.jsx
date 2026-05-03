@@ -13,8 +13,16 @@ const Footer = ({ onJoinClick }) => {
         <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-16">
           {/* About Section */}
           <div className="text-center md:text-left">
-            <span className="font-body text-[10px] text-white/70 uppercase tracking-[0.3em] block mb-2">Questions or Comments</span>
-            <h2 className="font-condensed text-5xl text-white uppercase italic leading-none mb-6">About Rayane</h2>
+            <KineticTypography 
+              text="Questions or Comments"
+              className="font-body text-[10px] text-white/70 uppercase tracking-[0.3em] block mb-2"
+              justifyClass="justify-center md:justify-start"
+            />
+            <KineticTypography 
+              text="About Rayane"
+              className="font-condensed text-5xl text-white uppercase italic leading-none mb-6"
+              justifyClass="justify-center md:justify-start"
+            />
             <button 
               onClick={onJoinClick}
               className="border-2 border-white text-white font-condensed text-xs uppercase tracking-[0.3em] px-8 py-2 hover:bg-white hover:text-primary-container transition-all"
@@ -44,10 +52,12 @@ const Footer = ({ onJoinClick }) => {
             <KineticTypography 
               text="Be a part of the force"
               className="font-body text-[10px] text-white/70 uppercase tracking-[0.3em] block mb-2"
+              justifyClass="justify-center md:justify-end"
             />
             <KineticTypography 
               text="FOLLOW US"
               className="font-condensed text-5xl text-white uppercase italic leading-none mb-8"
+              justifyClass="justify-center md:justify-end"
             />
             <div className="flex justify-center md:justify-end gap-5 md:gap-7">
               {/* Facebook */}
@@ -75,11 +85,15 @@ const Footer = ({ onJoinClick }) => {
         {/* Legal Bottom */}
         <div className="mt-20 pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="font-condensed text-[10px] text-white/60 uppercase tracking-widest italic">
-            © 2024 FITNESS RAYANE. UNAPOLOGETIC PERFORMANCE.
+            <KineticTypography text="© 2024 FITNESS RAYANE. UNAPOLOGETIC PERFORMANCE." justifyClass="justify-center md:justify-start" />
           </div>
           <div className="flex gap-6">
-            <a href="#" className="font-condensed text-[10px] text-white/60 uppercase tracking-widest hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="font-condensed text-[10px] text-white/60 uppercase tracking-widest hover:text-white transition-colors">Terms & Conditions</a>
+            <a href="#" className="hover:text-white transition-colors">
+              <KineticTypography text="Privacy Policy" className="font-condensed text-[10px] text-white/60 uppercase tracking-widest" />
+            </a>
+            <a href="#" className="hover:text-white transition-colors">
+              <KineticTypography text="Terms & Conditions" className="font-condensed text-[10px] text-white/60 uppercase tracking-widest" />
+            </a>
           </div>
         </div>
       </div>
