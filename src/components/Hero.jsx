@@ -40,7 +40,7 @@ const Hero = ({ onJoinClick }) => {
           >
             <button 
               onClick={onJoinClick}
-              className="bg-white text-black font-condensed text-xl md:text-2xl px-8 md:px-12 py-3 md:py-4 hover:bg-primary-container hover:text-white transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.2)]"
+              className="bg-white text-black font-condensed text-xl md:text-2xl px-8 md:px-12 py-3 md:py-4 hover:bg-primary-container hover:text-white transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.2)] animate-bounce-subtle"
             >
               LEARN MORE
             </button>

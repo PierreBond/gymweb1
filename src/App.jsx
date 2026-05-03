@@ -21,7 +21,7 @@ function App() {
       <Header onJoinClick={openModal} />
       <main>
         <Hero onJoinClick={openModal} />
-        <About />
+        <About onJoinClick={openModal} />
         <ClassesGrid />
         <BannerStrip />
         <InstagramGrid />

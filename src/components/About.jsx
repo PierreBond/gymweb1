@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 import KineticTypography from './KineticTypography';
 
-const About = () => {
+const About = ({ onJoinClick }) => {
   return (
     <section className="relative py-20 md:py-32 bg-white overflow-hidden" id="programs">
       {/* Decorative Diamond Shapes - Hidden on small mobile */}
@@ -32,7 +32,10 @@ const About = () => {
           
           <div className="flex justify-center items-center gap-4">
             <div className="w-12 h-[2px] bg-black/20"></div>
-            <button className="bg-black text-white font-condensed text-xl px-12 py-3 hover:bg-primary-container transition-all duration-300">
+            <button 
+              onClick={onJoinClick}
+              className="bg-black text-white font-condensed text-xl px-12 py-3 hover:bg-primary-container transition-all duration-300 animate-bounce-subtle"
+            >
               BOOK NOW
             </button>
             <div className="w-12 h-[2px] bg-black/20"></div>

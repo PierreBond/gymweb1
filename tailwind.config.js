@@ -9,11 +9,22 @@ export default {
     extend: {
       animation: {
         marquee: 'marquee 40s linear infinite',
+        'bounce-subtle': 'bounce-subtle 2s infinite',
       },
       keyframes: {
         marquee: {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-50%)' },
+        },
+        'bounce-subtle': {
+          '0%, 100%': {
+            transform: 'translateY(-5%)',
+            'animation-timing-function': 'cubic-bezier(0.8, 0, 1, 1)',
+          },
+          '50%': {
+            transform: 'translateY(0)',
+            'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)',
+          },
         },
       },
       colors: {
