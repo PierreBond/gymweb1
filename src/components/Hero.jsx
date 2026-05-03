@@ -28,7 +28,7 @@ const Hero = ({ onJoinClick }) => {
           >
             <h1 className="font-condensed text-[15vw] md:text-[12vw] lg:text-[160px] text-white leading-[0.85] uppercase tracking-tighter italic">
               GET <br />
-              <span className="text-primary-container drop-shadow-[0_0_30px_rgba(230,28,93,0.5)]">ARMOURED</span>
+              <span className="text-primary-container">ARMOURED</span>
             </h1>
             {/* Outline text overlay for depth */}
             <h1 className="absolute top-0 left-0 font-condensed text-[15vw] md:text-[12vw] lg:text-[160px] text-transparent leading-[0.85] uppercase tracking-tighter italic border-text-white opacity-20 pointer-events-none" style={{ WebkitTextStroke: '2px white' }}>

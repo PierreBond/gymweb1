@@ -8,15 +8,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        "primary-container": "#E61C5D", // Vibrant Magenta
+        "primary-container": "#FF3131", // Energetic Red
         "on-primary": "#FFFFFF",
         "background": "#0D0D0D", // Deep Black
         "surface": "#1A1A1A",
         "surface-container-high": "#242424",
         "on-background": "#FFFFFF",
         "secondary": "#B5B5B5",
-        "outline": "#E61C5D",
-        "inverse-primary": "#C2184D",
+        "outline": "#FF3131",
+        "inverse-primary": "#D90000",
       },
       fontFamily: {
         "condensed": ["Oswald", "sans-serif"],
