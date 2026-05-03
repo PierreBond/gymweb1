@@ -1,4 +1,5 @@
 import React from 'react';
+import KineticTypography from './KineticTypography';
 
 const Footer = ({ onJoinClick }) => {
   return (
@@ -26,16 +27,28 @@ const Footer = ({ onJoinClick }) => {
           <div className="flex justify-center order-first md:order-none">
             <div className="relative w-48 h-48 md:w-64 md:h-64 border-4 border-white flex flex-col items-center justify-center rotate-45 bg-primary-container shadow-2xl">
               <div className="rotate-[-45deg] text-center">
-                <span className="font-body text-[8px] md:text-[10px] text-white/80 uppercase tracking-widest block mb-1">Our Online Store</span>
-                <h3 className="font-condensed text-2xl md:text-4xl text-white uppercase italic leading-none">COMING <br />SOON...</h3>
+                <KineticTypography 
+                  text="Our Online Store"
+                  className="font-body text-[8px] md:text-[10px] text-white/80 uppercase tracking-widest block mb-1"
+                />
+                <KineticTypography 
+                  text="COMING SOON..."
+                  className="font-condensed text-2xl md:text-4xl text-white uppercase italic leading-none"
+                />
               </div>
             </div>
           </div>
 
           {/* Follow Us Section */}
           <div className="text-center md:text-right">
-            <span className="font-body text-[10px] text-white/70 uppercase tracking-[0.3em] block mb-2">Be a part of the force</span>
-            <h2 className="font-condensed text-5xl text-white uppercase italic leading-none mb-8">FOLLOW US</h2>
+            <KineticTypography 
+              text="Be a part of the force"
+              className="font-body text-[10px] text-white/70 uppercase tracking-[0.3em] block mb-2"
+            />
+            <KineticTypography 
+              text="FOLLOW US"
+              className="font-condensed text-5xl text-white uppercase italic leading-none mb-8"
+            />
             <div className="flex justify-center md:justify-end gap-5 md:gap-7">
               {/* Facebook */}
               <a href="#" className="w-10 h-10 border border-white flex items-center justify-center text-white hover:bg-white hover:text-primary-container transition-all rotate-45 group">

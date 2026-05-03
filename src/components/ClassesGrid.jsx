@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import KineticTypography from './KineticTypography';
 
 const classItems = [
   {
@@ -45,7 +46,10 @@ const ClassesGrid = () => {
                   <h3 className="font-condensed text-5xl md:text-6xl text-black leading-none uppercase italic tracking-tighter">
                     {item.title}
                   </h3>
-                  <p className="font-body text-secondary text-xs md:text-sm uppercase tracking-widest mt-2">{item.subtitle}</p>
+                  <KineticTypography 
+                    text={item.subtitle}
+                    className="font-body text-secondary text-xs md:text-sm uppercase tracking-widest mt-2"
+                  />
                 </div>
                 
                 {/* Breakout Image - Adjusted for Mobile */}

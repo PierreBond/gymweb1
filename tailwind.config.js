@@ -7,6 +7,15 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
+      animation: {
+        marquee: 'marquee 40s linear infinite',
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      },
       colors: {
         "primary-container": "#D90429", // Deeper, aggressive red
         "on-primary": "#FFFFFF",

@@ -1,12 +1,19 @@
 import React from 'react';
+import KineticTypography from './KineticTypography';
 
 const BannerStrip = () => {
   return (
     <section className="bg-black py-8 md:py-4 border-y border-white/10">
       <div className="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8">
         <div className="flex-1 flex flex-col items-center md:items-end text-center md:text-right">
-          <span className="font-script text-white text-lg md:text-xl mb-1">For More</span>
-          <h3 className="font-condensed text-2xl md:text-3xl text-white uppercase tracking-widest italic">Enquiries</h3>
+          <KineticTypography 
+            text="For More"
+            className="font-script text-white text-lg md:text-xl mb-1"
+          />
+          <KineticTypography 
+            text="Enquiries"
+            className="font-condensed text-2xl md:text-3xl text-white uppercase tracking-widest italic"
+          />
           <button className="mt-2 border border-white/30 text-white text-[9px] md:text-[10px] uppercase tracking-[0.2em] px-4 py-1 hover:bg-white hover:text-black transition-colors">Get More Details</button>
         </div>
 
@@ -18,8 +25,14 @@ const BannerStrip = () => {
         </div>
 
         <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
-          <span className="font-script text-white text-lg md:text-xl mb-1">Join</span>
-          <h3 className="font-condensed text-2xl md:text-3xl text-white uppercase tracking-widest italic">Armoured</h3>
+          <KineticTypography 
+            text="Join"
+            className="font-script text-white text-lg md:text-xl mb-1"
+          />
+          <KineticTypography 
+            text="Armoured"
+            className="font-condensed text-2xl md:text-3xl text-white uppercase tracking-widest italic"
+          />
           <button className="mt-2 bg-primary-container text-white text-[9px] md:text-[10px] uppercase tracking-[0.2em] px-4 py-1 hover:bg-white hover:text-black transition-colors">Join Us</button>
         </div>
       </div>

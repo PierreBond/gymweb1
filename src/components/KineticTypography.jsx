@@ -49,14 +49,17 @@ const KineticTypography = ({ text, className = "" }) => {
         {words.map((word, wordIndex) => (
           <span
             key={`word-${wordIndex}`}
-            className="inline-block whitespace-nowrap overflow-hidden mr-[0.25em]"
+            className="inline-block whitespace-nowrap overflow-hidden mr-[0.25em] px-[0.5em] -mx-[0.5em] py-[0.1em] -my-[0.1em]"
           >
             {word.split('').map((char, charIndex) => (
               <motion.span
                 key={`char-${charIndex}`}
                 variants={shouldReduceMotion ? {} : characterVariants}
                 className="inline-block"
-                style={{ display: 'inline-block' }}
+                style={{ 
+                  display: 'inline-block',
+                  paddingRight: '0.15em' // Generous padding for character slant
+                }}
               >
                 {char}
               </motion.span>

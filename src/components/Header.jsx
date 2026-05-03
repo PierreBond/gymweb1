@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import KineticTypography from './KineticTypography';
 
 const Header = ({ onJoinClick }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -14,7 +15,7 @@ const Header = ({ onJoinClick }) => {
   }, []);
 
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black/95 py-2' : 'bg-transparent py-6'}`}>
+    <header className={`fixed top-[30px] w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black/95 py-2' : 'bg-transparent py-6'}`}>
       <div className="flex justify-between items-center w-full px-12 max-w-[1600px] mx-auto">
         {/* Logo */}
         <div className="flex items-center gap-2 z-50 cursor-pointer scale-90 md:scale-100">
@@ -62,10 +63,18 @@ const Header = ({ onJoinClick }) => {
             exit={{ opacity: 0, x: '100%' }}
             className="fixed inset-0 bg-black/95 backdrop-blur-lg z-40 flex flex-col items-center justify-center gap-8 md:gap-12"
           >
-            <a onClick={() => setIsMobileMenuOpen(false)} className="text-white font-condensed text-3xl uppercase tracking-widest hover:text-primary-container transition-colors" href="#classes">The Disciplines</a>
-            <a onClick={() => setIsMobileMenuOpen(false)} className="text-white font-condensed text-3xl uppercase tracking-widest hover:text-primary-container transition-colors" href="#programs">Programs</a>
-            <a onClick={() => setIsMobileMenuOpen(false)} className="text-white font-condensed text-3xl uppercase tracking-widest hover:text-primary-container transition-colors" href="#trainers">Trainers</a>
-            <a onClick={() => setIsMobileMenuOpen(false)} className="text-white font-condensed text-3xl uppercase tracking-widest hover:text-primary-container transition-colors" href="#membership">Join Us</a>
+            <a onClick={() => setIsMobileMenuOpen(false)} href="#classes">
+              <KineticTypography text="The Disciplines" className="text-white font-condensed text-3xl uppercase tracking-widest hover:text-primary-container transition-colors" />
+            </a>
+            <a onClick={() => setIsMobileMenuOpen(false)} href="#programs">
+              <KineticTypography text="Programs" className="text-white font-condensed text-3xl uppercase tracking-widest hover:text-primary-container transition-colors" />
+            </a>
+            <a onClick={() => setIsMobileMenuOpen(false)} href="#trainers">
+              <KineticTypography text="Trainers" className="text-white font-condensed text-3xl uppercase tracking-widest hover:text-primary-container transition-colors" />
+            </a>
+            <a onClick={() => setIsMobileMenuOpen(false)} href="#membership">
+              <KineticTypography text="Join Us" className="text-white font-condensed text-3xl uppercase tracking-widest hover:text-primary-container transition-colors" />
+            </a>
             <button
               onClick={() => { setIsMobileMenuOpen(false); onJoinClick(); }}
               className="mt-8 bg-primary-container text-white font-condensed text-2xl uppercase tracking-widest px-12 py-4"
