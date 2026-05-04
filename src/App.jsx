@@ -7,6 +7,7 @@ import ClassesGrid from './components/ClassesGrid';
 import BannerStrip from './components/BannerStrip';
 import InstagramGrid from './components/InstagramGrid';
 import WhyJoinUs from './components/WhyJoinUs';
+import Membership from './components/Membership';
 import Footer from './components/Footer';
 import SignupModal from './components/SignupModal';
 
@@ -26,6 +27,7 @@ function App() {
         <About onJoinClick={openModal} />
         <ClassesGrid />
         <BannerStrip />
+        <Membership onJoinClick={openModal} />
         <InstagramGrid />
       </main>
       <Footer onJoinClick={openModal} />
