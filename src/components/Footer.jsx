@@ -40,11 +40,11 @@ const Footer = ({ onJoinClick }) => {
               <div className="rotate-[-45deg] text-center">
                 <KineticTypography
                   text="Our Online Store"
-                  className="font-body text-[8px] md:text-[10px] text-white/80 uppercase tracking-widest block mb-1"
+                  className="font-body text-[6px] md:text-[10px] text-white/80 uppercase tracking-widest block mb-1"
                 />
                 <KineticTypography
-                  text="COMING SOON..."
-                  className="font-condensed text-2xl md:text-4xl text-white uppercase italic leading-none"
+                  text="COMING SOON"
+                  className="font-condensed text-xl md:text-2xl text-white uppercase italic leading-none"
                 />
               </div>
             </div>
