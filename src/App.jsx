@@ -24,8 +24,9 @@ function App() {
       <Header onJoinClick={openModal} />
       <main>
         <Hero onJoinClick={openModal} />
-        <BecomeStronger />
         <WhyJoinUs />
+        <BecomeStronger />
+        
         <About onJoinClick={openModal} />
         <ClassesGrid />
         <BannerStrip />
