@@ -34,7 +34,7 @@ const About = ({ onJoinClick }) => {
             <div className="w-12 h-[2px] bg-black/20"></div>
             <button 
               onClick={onJoinClick}
-              className="bg-black text-white font-condensed text-xl px-12 py-3 hover:bg-primary-container transition-all duration-300 animate-bounce-subtle"
+              className="bg-black text-white font-condensed text-xl px-12 py-3 hover:bg-primary-container transition-all duration-300 animate-bounce-subtle join-target"
             >
               BOOK NOW
             </button>

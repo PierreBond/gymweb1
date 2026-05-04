@@ -1,6 +1,23 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import KineticTypography from './KineticTypography';
+import { useMagnetic } from '../hooks/useMagnetic';
+
+const MagneticButton = ({ children, onClick, className }) => {
+  const { ref, x, y, handleMouseMove, handleMouseLeave } = useMagnetic();
+  return (
+    <motion.div
+      ref={ref}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      onClick={onClick}
+      style={{ x, y }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+};
 
 const membershipPlans = [
   {
@@ -34,9 +51,9 @@ const Membership = ({ onJoinClick }) => {
             className="font-condensed text-4xl md:text-5xl text-white uppercase italic tracking-tighter"
             justifyClass="justify-start"
           />
-          <div className="w-12 h-12 bg-primary-container rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">
-            <span className="material-symbols-outlined text-white rotate-[-45deg]">arrow_forward</span>
-          </div>
+          <MagneticButton className="w-12 h-12 bg-primary-container rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform join-target">
+            <span className="material-symbols-outlined text-white rotate-[-45deg] pointer-events-none">arrow_forward</span>
+          </MagneticButton>
         </div>
 
         {/* Pricing List */}
@@ -48,7 +65,7 @@ const Membership = ({ onJoinClick }) => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className={`group flex flex-col md:flex-row items-center gap-8 p-8 md:p-12 transition-colors cursor-pointer ${plan.isPopular ? 'bg-white/5 border-y border-white/10' : 'hover:bg-white/5'}`}
+              className={`group flex flex-col md:flex-row items-center gap-8 p-8 md:p-12 transition-colors cursor-pointer join-target ${plan.isPopular ? 'bg-white/5 border-y border-white/10' : 'hover:bg-white/5'}`}
             >
               <div className="relative">
                 <span className="font-condensed text-7xl md:text-8xl text-primary-container italic font-bold leading-none">
@@ -92,10 +109,11 @@ const Membership = ({ onJoinClick }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* CTA 1 */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ clipPath: 'polygon(0 0, 100% 0, 100% 0, 0 0)' }}
+            whileInView={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}
             viewport={{ once: true }}
-            className="relative h-[350px] overflow-hidden group cursor-pointer border-4 border-primary-container"
+            transition={{ duration: 1, ease: [0.8, 0, 0.2, 1] }}
+            className="relative h-[350px] overflow-hidden group cursor-pointer border-4 border-primary-container join-target"
             onClick={onJoinClick}
           >
             <img src="/assets/images/class-powerlifting.jpg" className="w-full h-full object-cover grayscale brightness-50 group-hover:scale-110 transition-transform duration-700" alt="Membership" />
@@ -104,7 +122,7 @@ const Membership = ({ onJoinClick }) => {
               <span className="font-body text-[10px] text-white/80 uppercase tracking-widest mb-2 block">Membership</span>
               <h4 className="font-condensed text-3xl md:text-4xl text-white uppercase italic leading-none mb-4">Join Membership Now<br/>And Get 40% Off!</h4>
               <p className="font-body text-white/60 text-[10px] uppercase tracking-wider mb-6">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT.</p>
-              <div className="w-10 h-10 bg-white flex items-center justify-center rotate-45 self-start group-hover:bg-primary-container group-hover:scale-110 transition-all">
+              <div className="w-10 h-10 bg-white flex items-center justify-center rotate-45 self-start group-hover:bg-primary-container group-hover:scale-110 transition-all pointer-events-none">
                 <span className="material-symbols-outlined text-black -rotate-45 text-sm group-hover:text-white">arrow_forward</span>
               </div>
             </div>
@@ -112,11 +130,11 @@ const Membership = ({ onJoinClick }) => {
 
           {/* CTA 2 */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0 100%)' }}
+            whileInView={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="relative h-[350px] overflow-hidden group cursor-pointer border-4 border-white"
+            transition={{ duration: 1, ease: [0.8, 0, 0.2, 1], delay: 0.2 }}
+            className="relative h-[350px] overflow-hidden group cursor-pointer border-4 border-white view-target"
           >
             <img src="/assets/images/class-combat.jpg" className="w-full h-full object-cover grayscale brightness-50 group-hover:scale-110 transition-transform duration-700" alt="Opening Hours" />
             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors"></div>
@@ -124,7 +142,7 @@ const Membership = ({ onJoinClick }) => {
               <span className="font-body text-[10px] text-white/80 uppercase tracking-widest mb-2 block">Opening Hours</span>
               <h4 className="font-condensed text-3xl md:text-4xl text-white uppercase italic leading-none mb-4">Check Our Classes'<br/>Opening Hours!</h4>
               <p className="font-body text-white/60 text-[10px] uppercase tracking-wider mb-6">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT.</p>
-              <div className="w-10 h-10 bg-white flex items-center justify-center rotate-45 self-start group-hover:bg-primary-container group-hover:scale-110 transition-all">
+              <div className="w-10 h-10 bg-white flex items-center justify-center rotate-45 self-start group-hover:bg-primary-container group-hover:scale-110 transition-all pointer-events-none">
                 <span className="material-symbols-outlined text-black -rotate-45 text-sm group-hover:text-white">schedule</span>
               </div>
             </div>

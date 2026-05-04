@@ -9,7 +9,14 @@ const Hero = ({ onJoinClick }) => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Background Image with V-Split Overlay */}
-      <div className="absolute inset-0 bg-[url('/assets/images/hero.jpg')] bg-cover bg-center opacity-60 grayscale" role="img" aria-label="High performance athlete training"></div>
+      <motion.div 
+        initial={{ clipPath: 'polygon(0 0, 100% 0, 100% 0, 0 0)' }}
+        animate={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}
+        transition={{ duration: 1.5, ease: [0.8, 0, 0.2, 1] }}
+        className="absolute inset-0 bg-[url('/assets/images/hero.jpg')] bg-cover bg-center opacity-60 grayscale" 
+        role="img" 
+        aria-label="High performance athlete training"
+      ></motion.div>
       
       <div className="relative z-20 w-full max-w-7xl mx-auto px-6 pt-20">
         <div className="flex flex-col items-center text-center">

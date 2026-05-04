@@ -81,7 +81,7 @@ const WhyJoinUs = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-primary-container text-white font-condensed text-xl px-10 py-4 uppercase italic tracking-widest self-start shadow-[0_10px_20px_rgba(217,4,41,0.2)]"
+              className="bg-primary-container text-white font-condensed text-xl px-10 py-4 uppercase italic tracking-widest self-start shadow-[0_10px_20px_rgba(217,4,41,0.2)] view-target"
             >
               More About Us
             </motion.button>
