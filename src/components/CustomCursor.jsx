@@ -100,9 +100,9 @@ const CustomCursor = () => {
     switch(theme) {
       case 'light': // Over White background
         return {
-          idleBorder: "rgba(217, 4, 41, 1)",    // Red ring
-          hoverBg: "rgba(217, 4, 41, 1)",       // Red fill
-          hoverBorder: "rgba(217, 4, 41, 1)",
+          idleBorder: "rgba(179, 0, 12, 1)",    // Red ring
+          hoverBg: "rgba(179, 0, 12, 1)",       // Red fill
+          hoverBorder: "rgba(179, 0, 12, 1)",
           text: "rgba(255, 255, 255, 1)"        // White text
         };
       case 'red': // Over Red background/button

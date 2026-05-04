@@ -15,8 +15,8 @@ const Header = ({ onJoinClick }) => {
   }, []);
 
   return (
-    <header className={`fixed top-[30px] w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black/95 py-2' : 'bg-transparent py-6'}`}>
-      <div className="flex justify-between items-center w-full px-12 max-w-[1600px] mx-auto">
+    <header className={`fixed top-[30px] w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black/95 py-2' : 'bg-transparent py-4 md:py-6'}`}>
+      <div className="flex justify-between items-center w-full px-6 md:px-12 max-w-[1600px] mx-auto">
         {/* Logo */}
         <div className="flex items-center gap-2 z-50 cursor-pointer scale-90 md:scale-100">
           <div className="w-7 h-7 bg-white flex items-center justify-center rotate-45">

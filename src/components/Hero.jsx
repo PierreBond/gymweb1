@@ -38,7 +38,7 @@ const Hero = ({ onJoinClick }) => {
 
           <KineticTypography 
             text="Our elite training facility provides the tools to armor yourself both mind and body. Shatter your limits and become the best version of yourself."
-            className="font-body text-secondary mt-8 max-w-xl text-[11px] md:text-sm uppercase tracking-[0.2em] px-4 md:px-0 leading-relaxed"
+            className="font-body text-secondary mt-8 max-w-xl text-xs md:text-sm uppercase tracking-[0.2em] px-4 md:px-0 leading-relaxed"
           />
 
           <motion.div 
