@@ -1,14 +1,16 @@
+import React from 'react';
 import { motion } from 'framer-motion';
+import { useMagnetic } from '../hooks/useMagnetic';
 import KineticTypography from './KineticTypography';
 
 const Hero = ({ onJoinClick }) => {
+  const { ref, x, y, handleMouseMove, handleMouseLeave } = useMagnetic();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Background Image with V-Split Overlay */}
       <div className="absolute inset-0 bg-[url('/assets/images/hero.jpg')] bg-cover bg-center opacity-60 grayscale" role="img" aria-label="High performance athlete training"></div>
       
-     
-
       <div className="relative z-20 w-full max-w-7xl mx-auto px-6 pt-20">
         <div className="flex flex-col items-center text-center">
           <span className="font-script text-primary-container text-4xl mb-[-10px] transform -rotate-6 z-30">
@@ -33,14 +35,15 @@ const Hero = ({ onJoinClick }) => {
           />
 
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
+            style={{ x, y }}
             className="mt-12"
           >
             <button 
+              ref={ref}
+              onMouseMove={handleMouseMove}
+              onMouseLeave={handleMouseLeave}
               onClick={onJoinClick}
-              className="bg-white text-black font-condensed text-xl md:text-2xl px-8 md:px-12 py-3 md:py-4 hover:bg-primary-container hover:text-white transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.2)] animate-bounce-subtle"
+              className="bg-white text-black font-condensed text-xl md:text-2xl px-8 md:px-12 py-3 md:py-4 hover:bg-primary-container hover:text-white transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.2)] animate-bounce-subtle join-target"
             >
               LEARN MORE
             </button>

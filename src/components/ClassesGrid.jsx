@@ -41,7 +41,7 @@ const ClassesGrid = () => {
               className="relative group"
             >
               {/* Thick Border Container */}
-              <div className={`relative z-10 border-[8px] md:border-[12px] ${item.color} bg-white p-6 md:p-8 h-[250px] md:h-[300px] flex flex-col justify-center overflow-hidden transition-transform duration-500 group-hover:-translate-y-2`}>
+              <div className={`relative z-10 border-[8px] md:border-[12px] ${item.color} bg-white p-6 md:p-8 h-[250px] md:h-[300px] flex flex-col justify-center overflow-hidden transition-transform duration-500 group-hover:-translate-y-2 view-target`}>
                 <div className="relative z-20">
                   <h3 className="font-condensed text-5xl md:text-6xl text-black leading-none uppercase italic tracking-tighter">
                     {item.title}
