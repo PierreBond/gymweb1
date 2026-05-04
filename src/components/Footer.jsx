@@ -23,7 +23,7 @@ const Footer = ({ onJoinClick }) => {
             />
             <KineticTypography
               text="About Rayane"
-              className="font-condensed text-5xl text-white uppercase italic leading-none mb-6"
+              className="font-condensed text-2xl text-white uppercase italic leading-none mb-6"
               justifyClass="justify-center md:justify-start"
             />
             <button
@@ -59,7 +59,7 @@ const Footer = ({ onJoinClick }) => {
             />
             <KineticTypography
               text="FOLLOW US"
-              className="font-condensed text-5xl text-white uppercase italic leading-none mb-8"
+              className="font-condensed text-2xl text-white uppercase italic leading-none mb-8"
               justifyClass="justify-center md:justify-end"
             />
             <div className="flex justify-center md:justify-end gap-5 md:gap-7">
