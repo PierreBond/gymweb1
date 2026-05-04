@@ -2,73 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import KineticTypography from './KineticTypography';
 
-const features = [
-  {
-    id: '01',
-    title: 'Group Workout',
-    description: 'Involves resistance exercises using weight resistance band to build muscle strength increase metabolism.',
-    icon: 'groups'
-  },
-  {
-    id: '02',
-    title: 'Personal Train',
-    description: 'Involves resistance exercises using weight resistance band to build muscle strength increase metabolism.',
-    icon: 'fitness_center'
-  },
-  {
-    id: '03',
-    title: 'Muscle Building',
-    description: 'Involves resistance exercises using weight resistance band to build muscle strength increase metabolism.',
-    icon: 'exercise'
-  }
-];
-
 const WhyJoinUs = () => {
   return (
     <section className="py-24 bg-white overflow-hidden" id="about">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Why Choose Us Header */}
-        <div className="text-center mb-16">
-          <KineticTypography 
-            text="Why Choose Us"
-            className="font-condensed text-5xl md:text-6xl text-black uppercase italic mb-4"
-          />
-          <p className="font-body text-secondary text-sm md:text-base max-w-2xl mx-auto leading-relaxed uppercase tracking-wider">
-            Body fitness encompasses various aspects of physical health and well-being, involving a combination of exercise, nutrition, and lifestyle choices.
-          </p>
-        </div>
-
-        {/* Feature Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
-          {features.map((feature, index) => (
-            <motion.div
-              key={feature.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.2 }}
-              className="bg-[#F8F8F8] p-10 border-b-4 border-transparent hover:border-primary-container transition-all group relative overflow-hidden"
-            >
-              <div className="flex justify-between items-start mb-8">
-                <div className="w-16 h-16 bg-white flex items-center justify-center rotate-45 shadow-sm group-hover:bg-primary-container transition-colors duration-300">
-                  <span className="material-symbols-outlined text-black group-hover:text-white -rotate-45 text-3xl">
-                    {feature.icon}
-                  </span>
-                </div>
-                <span className="font-condensed text-6xl text-black/5 uppercase italic font-bold">
-                  {feature.id}
-                </span>
-              </div>
-              <h3 className="font-condensed text-2xl text-black uppercase italic mb-4 tracking-tight">
-                {feature.title}
-              </h3>
-              <p className="font-body text-secondary text-sm leading-relaxed">
-                {feature.description}
-              </p>
-            </motion.div>
-          ))}
-        </div>
-
         {/* About Us / Roadmap Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Image Side */}

@@ -11,6 +11,7 @@ import Membership from './components/Membership';
 import BecomeStronger from './components/BecomeStronger';
 import Footer from './components/Footer';
 import SignupModal from './components/SignupModal';
+import FeaturesGrid from './components/FeaturesGrid';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -26,7 +27,7 @@ function App() {
         <Hero onJoinClick={openModal} />
         <WhyJoinUs />
         <BecomeStronger />
-        
+        <FeaturesGrid />
         <About onJoinClick={openModal} />
         <ClassesGrid />
         <BannerStrip />
