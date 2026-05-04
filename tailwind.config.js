@@ -7,9 +7,11 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
-      animation: {
+animation: {
         marquee: 'marquee 40s linear infinite',
+        'marquee-fast': 'marquee 4s linear infinite',
         'bounce-subtle': 'bounce-subtle 2s infinite',
+        'pulse-bounce': 'pulse-bounce 3s infinite ease-in-out',
       },
       keyframes: {
         marquee: {
