@@ -30,7 +30,7 @@ const Hero = ({ onJoinClick }) => {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="relative"
           >
-            <h1 className="font-condensed text-[15vw] md:text-[12vw] lg:text-[160px] text-white leading-[0.85] uppercase tracking-tighter italic">
+            <h1 className="font-heavy text-[15vw] md:text-[12vw] lg:text-[160px] text-white leading-[0.85] uppercase tracking-tighter italic">
               GET <br />
               <span className="text-primary-container">ARMOURED</span>
             </h1>

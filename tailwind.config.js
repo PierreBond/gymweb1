@@ -44,6 +44,7 @@ export default {
         "condensed": ["Oswald", "sans-serif"],
         "script": ["Caveat", "cursive"],
         "body": ["Inter", "sans-serif"],
+        "heavy": ["Anton", "sans-serif"],
       },
       fontSize: {
         "display-2xl": ["120px", { lineHeight: "0.9", fontWeight: "700" }],
