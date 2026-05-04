@@ -23,19 +23,19 @@ const membershipPlans = [
   {
     price: '$439',
     title: '3 MONTHS MEMBERSHIP CARD',
-    description: 'LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. FEUGIAT ELEIFEND ORNARE NON URNA.',
+    description: 'FULL ACCESS TO ALL ELITE EQUIPMENT, CLASSES, AND RECOVERY ZONES. COMMIT TO THE GRIND.',
     isPopular: false
   },
   {
     price: '$169',
     title: '10 CLASSES CARD',
-    description: 'LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. FEUGIAT ELEIFEND ORNARE NON URNA.',
+    description: 'FLEXIBLE ACCESS FOR THE BUSY ATHLETE. PUSH YOUR LIMITS ON YOUR OWN SCHEDULE.',
     isPopular: true
   },
   {
     price: '$291',
     title: 'SINGLE DROP IN',
-    description: 'LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. FEUGIAT ELEIFEND ORNARE NON URNA.',
+    description: 'NO EXCUSES. ONE DAY PASS TO EXPERIENCE TRUE HIGH-PERFORMANCE TRAINING.',
     isPopular: false
   }
 ];
@@ -121,7 +121,7 @@ const Membership = ({ onJoinClick }) => {
             <div className="absolute inset-0 p-10 flex flex-col justify-end">
               <span className="font-body text-[10px] text-white/80 uppercase tracking-widest mb-2 block">Membership</span>
               <h4 className="font-condensed text-3xl md:text-4xl text-white uppercase italic leading-none mb-4">Join Membership Now<br/>And Get 40% Off!</h4>
-              <p className="font-body text-white/60 text-[10px] uppercase tracking-wider mb-6">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT.</p>
+              <p className="font-body text-white/60 text-[10px] uppercase tracking-wider mb-6">UNLOCK EXCLUSIVE ACCESS TO PREMIUM COACHING AND NUTRITION GUIDES.</p>
               <div className="w-10 h-10 bg-white flex items-center justify-center rotate-45 self-start group-hover:bg-primary-container group-hover:scale-110 transition-all pointer-events-none">
                 <span className="material-symbols-outlined text-black -rotate-45 text-sm group-hover:text-white">arrow_forward</span>
               </div>
@@ -141,7 +141,7 @@ const Membership = ({ onJoinClick }) => {
             <div className="absolute inset-0 p-10 flex flex-col justify-end">
               <span className="font-body text-[10px] text-white/80 uppercase tracking-widest mb-2 block">Opening Hours</span>
               <h4 className="font-condensed text-3xl md:text-4xl text-white uppercase italic leading-none mb-4">Check Our Classes'<br/>Opening Hours!</h4>
-              <p className="font-body text-white/60 text-[10px] uppercase tracking-wider mb-6">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT.</p>
+              <p className="font-body text-white/60 text-[10px] uppercase tracking-wider mb-6">TRAIN WHEN IT MATTERS. VIEW OUR COMPREHENSIVE SCHEDULE OF ELITE SESSIONS.</p>
               <div className="w-10 h-10 bg-white flex items-center justify-center rotate-45 self-start group-hover:bg-primary-container group-hover:scale-110 transition-all pointer-events-none">
                 <span className="material-symbols-outlined text-black -rotate-45 text-sm group-hover:text-white">schedule</span>
               </div>

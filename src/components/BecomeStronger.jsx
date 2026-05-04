@@ -5,32 +5,32 @@ import KineticTypography from './KineticTypography';
 const features = [
   {
     title: 'DISCOVER THE POWER',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore aliqua.',
+    description: 'Unlock your true potential with state-of-the-art equipment designed for maximum muscle hypertrophy and endurance.',
     icon: 'assignment'
   },
   {
     title: 'DIET IS EVERYTHING',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore aliqua.',
+    description: 'Customized nutrition plans crafted by elite dietitians to fuel your body, shred fat, and accelerate recovery.',
     icon: 'nutrition'
   },
   {
     title: 'TRAIN WITH ELITE',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore aliqua.',
+    description: 'Learn directly from champion powerlifters and combat athletes who have proven themselves in the arena.',
     icon: 'fitness_center'
   },
   {
     title: 'YOUR HEALTH-YOUR WAY',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore aliqua.',
+    description: 'Comprehensive tracking and personalized programming strictly tailored to your unique physiological baseline.',
     icon: 'monitor_heart'
   },
   {
     title: 'MASTER THE UPPER CUT',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore aliqua.',
+    description: 'Professional striking coaches to sharpen your technique, speed, and devastating knockout power.',
     icon: 'sports_mma'
   },
   {
     title: 'FIRST CLASS MACHINES',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore aliqua.',
+    description: 'Train on custom-built, competition-grade apparatus meticulously engineered for flawless biomechanics.',
     icon: 'settings_accessibility'
   }
 ];
