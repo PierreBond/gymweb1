@@ -30,15 +30,15 @@ export default {
         },
       },
       colors: {
-        "primary-container": "#D90429", // Deeper, aggressive red
+        "primary-container": "#B3000C", // Deeper, more aggressive gym red
         "on-primary": "#FFFFFF",
         "background": "#0D0D0D", // Deep Black
         "surface": "#1A1A1A",
         "surface-container-high": "#242424",
         "on-background": "#FFFFFF",
         "secondary": "#B5B5B5",
-        "outline": "#D90429",
-        "inverse-primary": "#941B0C",
+        "outline": "#B3000C",
+        "inverse-primary": "#7A0008",
       },
       fontFamily: {
         "condensed": ["Oswald", "sans-serif"],
