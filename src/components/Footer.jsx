@@ -5,25 +5,28 @@ const Footer = ({ onJoinClick }) => {
   return (
     <footer className="relative bg-primary-container py-24 overflow-hidden">
       {/* Background Text Decor */}
-      <div className="absolute inset-0 flex items-center justify-center opacity-10 select-none pointer-events-none">
-        <span className="font-condensed text-[30vw] text-white font-bold leading-none uppercase italic">ELITE</span>
+      <div className="absolute inset-0 flex items-center overflow-hidden opacity-10 select-none pointer-events-none whitespace-nowrap">
+        <div className="flex animate-[marquee_40s_linear_infinite]">
+          <span className="font-condensed text-[30vw] text-white font-bold leading-none uppercase italic px-12">ELITE</span>
+          <span className="font-condensed text-[30vw] text-white font-bold leading-none uppercase italic px-12">ELITE</span>
+        </div>
       </div>
 
       <div className="max-w-[1400px] mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-16">
           {/* About Section */}
           <div className="text-center md:text-left">
-            <KineticTypography 
+            <KineticTypography
               text="Questions or Comments"
               className="font-body text-[10px] text-white/70 uppercase tracking-[0.3em] block mb-2"
               justifyClass="justify-center md:justify-start"
             />
-            <KineticTypography 
+            <KineticTypography
               text="About Rayane"
               className="font-condensed text-5xl text-white uppercase italic leading-none mb-6"
               justifyClass="justify-center md:justify-start"
             />
-            <button 
+            <button
               onClick={onJoinClick}
               className="border-2 border-white text-white font-condensed text-xs uppercase tracking-[0.3em] px-8 py-2 hover:bg-white hover:text-primary-container transition-all"
             >
@@ -35,11 +38,11 @@ const Footer = ({ onJoinClick }) => {
           <div className="flex justify-center order-first md:order-none">
             <div className="relative w-48 h-48 md:w-64 md:h-64 border-4 border-white flex flex-col items-center justify-center rotate-45 bg-primary-container shadow-2xl">
               <div className="rotate-[-45deg] text-center">
-                <KineticTypography 
+                <KineticTypography
                   text="Our Online Store"
                   className="font-body text-[8px] md:text-[10px] text-white/80 uppercase tracking-widest block mb-1"
                 />
-                <KineticTypography 
+                <KineticTypography
                   text="COMING SOON..."
                   className="font-condensed text-2xl md:text-4xl text-white uppercase italic leading-none"
                 />
@@ -49,12 +52,12 @@ const Footer = ({ onJoinClick }) => {
 
           {/* Follow Us Section */}
           <div className="text-center md:text-right">
-            <KineticTypography 
+            <KineticTypography
               text="Be a part of the force"
               className="font-body text-[10px] text-white/70 uppercase tracking-[0.3em] block mb-2"
               justifyClass="justify-center md:justify-end"
             />
-            <KineticTypography 
+            <KineticTypography
               text="FOLLOW US"
               className="font-condensed text-5xl text-white uppercase italic leading-none mb-8"
               justifyClass="justify-center md:justify-end"
