@@ -141,7 +141,7 @@ const Membership = ({ onJoinClick }) => {
             <div className="absolute inset-0 p-10 flex flex-col justify-end">
               <span className="font-body text-[10px] text-white/80 uppercase tracking-widest mb-2 block">Opening Hours</span>
               <h4 className="font-condensed text-3xl md:text-4xl text-white uppercase italic leading-none mb-4">Check Our Classes'<br/>Opening Hours!</h4>
-              <p className="font-body text-white/60 text-[10px] uppercase tracking-wider mb-6">TRAIN WHEN IT MATTERS. VIEW OUR COMPREHENSIVE SCHEDULE OF ELITE SESSIONS.</p>
+              <p className="font-body text-white/60 text-[10px] uppercase tracking-wider mb-6">MON - SAT: 7:00 - 22:00 | SUN: 10:00 - 14:00</p>
               <div className="w-10 h-10 bg-white flex items-center justify-center rotate-45 self-start group-hover:bg-primary-container group-hover:scale-110 transition-all pointer-events-none">
                 <span className="material-symbols-outlined text-black -rotate-45 text-sm group-hover:text-white">schedule</span>
               </div>

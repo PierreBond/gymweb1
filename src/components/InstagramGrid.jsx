@@ -25,7 +25,7 @@ const InstagramGrid = () => {
                 <div className="w-12 h-12 bg-black rotate-45 flex items-center justify-center">
                   <span className="material-symbols-outlined text-white -rotate-45 font-bold">fitness_center</span>
                 </div>
-                <span className="font-condensed text-sm text-black mt-4 tracking-widest">@fitnessrayane</span>
+                <span className="font-condensed text-sm text-black mt-4 tracking-widest">@rayane_fitness_club</span>
               </div>
             )}
           </div>

@@ -5,19 +5,19 @@ import KineticTypography from './KineticTypography';
 const features = [
   {
     id: '01',
-    title: 'Group Workout',
-    description: 'Involves resistance exercises using weight resistance band to build muscle strength increase metabolism.',
-    icon: 'groups'
-  },
-  {
-    id: '02',
-    title: 'Personal Train',
+    title: 'Weightlifting & Cardio',
     description: 'Involves resistance exercises using weight resistance band to build muscle strength increase metabolism.',
     icon: 'fitness_center'
   },
   {
+    id: '02',
+    title: 'Group Classes & Dance',
+    description: 'Involves resistance exercises using weight resistance band to build muscle strength increase metabolism.',
+    icon: 'groups'
+  },
+  {
     id: '03',
-    title: 'Muscle Building',
+    title: 'Personal Coaching',
     description: 'Involves resistance exercises using weight resistance band to build muscle strength increase metabolism.',
     icon: 'exercise'
   }
