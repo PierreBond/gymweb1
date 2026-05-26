@@ -4,12 +4,12 @@ const AnnouncementBar = () => {
   const message = "Special discounts for students";
   
   // Repeating the message to ensure a seamless loop
-  const content = Array(10).fill(
-    <div className="flex items-center gap-4 shrink-0 px-4">
+  const content = Array.from({ length: 10 }).map((_, index) => (
+    <div key={index} className="flex items-center gap-4 shrink-0 px-4">
       <span>{message}</span>
       <span className="material-symbols-outlined text-[14px]">arrow_right_alt</span>
     </div>
-  );
+  ));
 
   return (
     <div className="fixed top-0 left-0 w-full h-[30px] bg-black text-[#f4f4f0] z-[100] flex items-center overflow-hidden select-none border-b border-white/5">

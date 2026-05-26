@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import KineticTypography from './KineticTypography';
+import OptimizedImage from './OptimizedImage';
 
 const classItems = [
   {
@@ -48,13 +49,18 @@ const ClassesGrid = () => {
                   </h3>
                   <KineticTypography 
                     text={item.subtitle}
-                    className="font-body text-secondary text-xs md:text-sm uppercase tracking-widest mt-2"
+                    className="font-body text-neutral-500 text-xs md:text-sm uppercase tracking-widest mt-2"
                   />
                 </div>
                 
                 {/* Breakout Image - Adjusted for Mobile */}
                 <div className="absolute -right-4 -bottom-4 md:-right-10 md:-bottom-10 w-[150px] h-[150px] md:w-[200px] md:h-[200px] opacity-30 md:opacity-20 group-hover:opacity-50 transition-opacity duration-500">
-                   <img src={item.image} alt={item.title} className="w-full h-full object-cover grayscale" />
+                   <OptimizedImage 
+                     src={item.image.replace('.jpg', '.webp')}
+                     fallback={item.image}
+                     alt={item.title}
+                     className="w-full h-full object-cover grayscale" 
+                   />
                 </div>
               </div>
 

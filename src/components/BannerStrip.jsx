@@ -1,14 +1,14 @@
 import React from 'react';
 
 const BannerStrip = () => {
-  const message = (
-    <span className="shrink-0 px-12">
+  const renderMessage = (index) => (
+    <span key={index} className="shrink-0 px-12">
       FOCUS ON YOUR <span className="text-primary-container">WORKOUT</span> AND WE WILL HANDLE THE REST
     </span>
   );
   
   // Create content
-  const content = Array(10).fill(message);
+  const content = Array.from({ length: 10 }).map((_, index) => renderMessage(index));
 
   return (
     <section className="bg-black py-10 border-y border-white/10 overflow-hidden">

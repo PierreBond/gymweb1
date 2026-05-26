@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import KineticTypography from './KineticTypography';
+import OptimizedImage from './OptimizedImage';
 
 const WhyJoinUs = () => {
   return (
@@ -17,8 +18,9 @@ const WhyJoinUs = () => {
               className="relative z-10 border-[12px] border-black p-4"
             >
               <div className="aspect-[4/5] md:aspect-square overflow-hidden bg-black">
-                <img 
-                  src="/assets/images/about-man.jpg" 
+                <OptimizedImage 
+                  src="/assets/images/about-man.webp"
+                  fallback="/assets/images/about-man.jpg"
                   alt="Training" 
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-110 hover:scale-100"
                 />
@@ -59,7 +61,7 @@ const WhyJoinUs = () => {
               justifyClass="justify-start"
             />
 
-            <p className="font-body text-secondary text-sm md:text-base leading-relaxed mb-10 max-w-xl">
+            <p className="font-body text-neutral-600 text-sm md:text-base leading-relaxed mb-10 max-w-xl">
               Body fitness encompasses various aspects of physical health and well-being, involving a combination of exercise, nutrition, and lifestyle choices. Achieving and maintaining optimal body fitness contributes to overall health, vitality. Joining fitness classes, sports teams, or workout groups provides social support.
             </p>
 
@@ -74,7 +76,7 @@ const WhyJoinUs = () => {
               </div>
             </div>
 
-            <p className="font-body text-secondary text-xs italic mb-10 max-w-lg border-l-4 border-primary-container pl-4">
+            <p className="font-body text-neutral-600 text-xs italic mb-10 max-w-lg border-l-4 border-primary-container pl-4">
               Gradually increasing the intensity, duration, or complexity of exercises ensures ongoing improvements in strength, endurance, and overall fitness.
             </p>
 

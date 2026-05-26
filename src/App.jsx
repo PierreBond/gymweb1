@@ -11,8 +11,9 @@ import Membership from './components/Membership';
 import BecomeStronger from './components/BecomeStronger';
 import CustomCursor from './components/CustomCursor';
 import Footer from './components/Footer';
-import SignupModal from './components/SignupModal';
 import FeaturesGrid from './components/FeaturesGrid';
+
+const SignupModal = React.lazy(() => import('./components/SignupModal'));
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -38,7 +39,9 @@ function App() {
       </main>
       <Footer onJoinClick={openModal} />
       
-      <SignupModal isOpen={isModalOpen} onClose={closeModal} />
+      <React.Suspense fallback={null}>
+        <SignupModal isOpen={isModalOpen} onClose={closeModal} />
+      </React.Suspense>
     </div>
   );
 }

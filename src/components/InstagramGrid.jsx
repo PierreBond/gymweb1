@@ -1,4 +1,5 @@
 import React from 'react';
+import OptimizedImage from './OptimizedImage';
 
 const InstagramGrid = () => {
   const images = [
@@ -16,7 +17,12 @@ const InstagramGrid = () => {
           <div key={index} className={`aspect-square relative group overflow-hidden border-r border-white/5 last:border-0 ${index === 2 ? 'hidden md:flex' : 'flex'}`}>
             {img ? (
               <>
-                <img src={img} alt="Insta" className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" />
+                <OptimizedImage 
+                  src={img.replace('.jpg', '.webp')}
+                  fallback={img}
+                  alt="Insta"
+                  className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" 
+                />
                 <div className="absolute inset-0 bg-primary-container/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </>
             ) : (

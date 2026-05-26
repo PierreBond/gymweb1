@@ -29,7 +29,7 @@ const Header = ({ onJoinClick }) => {
         <nav className="hidden md:flex gap-12 items-center flex-1 justify-center">
           <a className="text-white font-condensed text-xs uppercase tracking-[0.3em] hover:text-primary-container transition-colors" href="#classes">The Disciplines</a>
           <a className="text-white font-condensed text-xs uppercase tracking-[0.3em] hover:text-primary-container transition-colors" href="#programs">Programs</a>
-          <a className="text-white font-condensed text-xs uppercase tracking-[0.3em] hover:text-primary-container transition-colors" href="#trainers">Trainers</a>
+          <a className="text-white font-condensed text-xs uppercase tracking-[0.3em] hover:text-primary-container transition-colors" href="#about">About</a>
           <a className="text-white font-condensed text-xs uppercase tracking-[0.3em] hover:text-primary-container transition-colors" href="#membership">Join Us</a>
         </nav>
 
@@ -69,8 +69,8 @@ const Header = ({ onJoinClick }) => {
             <a onClick={() => setIsMobileMenuOpen(false)} href="#programs">
               <KineticTypography text="Programs" className="text-white font-condensed text-3xl uppercase tracking-widest hover:text-primary-container transition-colors" />
             </a>
-            <a onClick={() => setIsMobileMenuOpen(false)} href="#trainers">
-              <KineticTypography text="Trainers" className="text-white font-condensed text-3xl uppercase tracking-widest hover:text-primary-container transition-colors" />
+            <a onClick={() => setIsMobileMenuOpen(false)} href="#about">
+              <KineticTypography text="About" className="text-white font-condensed text-3xl uppercase tracking-widest hover:text-primary-container transition-colors" />
             </a>
             <a onClick={() => setIsMobileMenuOpen(false)} href="#membership">
               <KineticTypography text="Join Us" className="text-white font-condensed text-3xl uppercase tracking-widest hover:text-primary-container transition-colors" />

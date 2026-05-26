@@ -6,19 +6,19 @@ const features = [
   {
     id: '01',
     title: 'Weightlifting & Cardio',
-    description: 'Involves resistance exercises using weight resistance band to build muscle strength increase metabolism.',
+    description: 'Elite athletic conditioning combining heavy compound progressive resistance with metabolic conditioning for absolute strength gains.',
     icon: 'fitness_center'
   },
   {
     id: '02',
     title: 'Group Classes & Dance',
-    description: 'Involves resistance exercises using weight resistance band to build muscle strength increase metabolism.',
+    description: 'High-intensity, community-driven sweat sessions designed to boost explosive endurance, core stability, and agility.',
     icon: 'groups'
   },
   {
     id: '03',
     title: 'Personal Coaching',
-    description: 'Involves resistance exercises using weight resistance band to build muscle strength increase metabolism.',
+    description: 'Customized periodization programs, biomechanical assessments, and custom-tailored guidance from certified trainers.',
     icon: 'exercise'
   }
 ];
@@ -33,7 +33,7 @@ const FeaturesGrid = () => {
             text="Why Choose Us"
             className="font-condensed text-5xl md:text-6xl text-black uppercase italic mb-4"
           />
-          <p className="font-body text-secondary text-sm md:text-base max-w-2xl mx-auto leading-relaxed uppercase tracking-wider">
+          <p className="font-body text-neutral-600 text-sm md:text-base max-w-2xl mx-auto leading-relaxed uppercase tracking-wider">
             Body fitness encompasses various aspects of physical health and well-being, involving a combination of exercise, nutrition, and lifestyle choices.
           </p>
         </div>
@@ -62,7 +62,7 @@ const FeaturesGrid = () => {
               <h3 className="font-condensed text-2xl text-black uppercase italic mb-4 tracking-tight">
                 {feature.title}
               </h3>
-              <p className="font-body text-secondary text-sm leading-relaxed">
+              <p className="font-body text-neutral-600 text-sm leading-relaxed">
                 {feature.description}
               </p>
             </motion.div>

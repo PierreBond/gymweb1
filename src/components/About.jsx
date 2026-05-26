@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 import KineticTypography from './KineticTypography';
+import OptimizedImage from './OptimizedImage';
 
 const About = ({ onJoinClick }) => {
   return (
@@ -27,7 +28,7 @@ const About = ({ onJoinClick }) => {
           </h2>
           <KineticTypography 
             text="Connect with coaches online, book workouts and classes with ease. Your transformation starts with a conversation."
-            className="font-body text-secondary text-sm md:text-lg uppercase tracking-[0.2em] max-w-2xl mb-8 md:mb-12"
+            className="font-body text-neutral-600 text-sm md:text-lg uppercase tracking-[0.2em] max-w-2xl mb-8 md:mb-12"
           />
           
           <div className="flex justify-center items-center gap-4">
@@ -50,7 +51,12 @@ const About = ({ onJoinClick }) => {
         viewport={{ once: true }}
         className="absolute left-0 top-1/2 -translate-y-1/2 w-1/4 h-full hidden lg:block opacity-10"
       >
-        <img src="/assets/images/about.jpg" alt="Athlete" className="w-full h-full object-cover grayscale" />
+        <OptimizedImage 
+          src="/assets/images/about.webp"
+          fallback="/assets/images/about.jpg"
+          alt="Athlete"
+          className="w-full h-full object-cover grayscale" 
+        />
       </motion.div>
     </section>
   );

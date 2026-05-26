@@ -17,6 +17,7 @@ const Hero = ({ onJoinClick }) => {
         className="absolute inset-0 w-full h-full object-cover opacity-60 grayscale"
         aria-label="High performance athlete training"
       >
+        <source src="/assets/videos/gym-hero1.webm" type="video/webm" />
         <source src="/assets/videos/gym-hero1.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>

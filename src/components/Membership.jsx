@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import KineticTypography from './KineticTypography';
 import { useMagnetic } from '../hooks/useMagnetic';
+import OptimizedImage from './OptimizedImage';
 
 const MagneticButton = ({ children, onClick, className }) => {
   const { ref, x, y, handleMouseMove, handleMouseLeave } = useMagnetic();
@@ -116,7 +117,12 @@ const Membership = ({ onJoinClick }) => {
             className="relative h-[350px] overflow-hidden group cursor-pointer border-4 border-primary-container join-target"
             onClick={onJoinClick}
           >
-            <img src="/assets/images/class-powerlifting.jpg" className="w-full h-full object-cover grayscale brightness-50 group-hover:scale-110 transition-transform duration-700" alt="Membership" />
+            <OptimizedImage 
+              src="/assets/images/class-powerlifting.webp"
+              fallback="/assets/images/class-powerlifting.jpg"
+              alt="Membership"
+              className="w-full h-full object-cover grayscale brightness-50 group-hover:scale-110 transition-transform duration-700" 
+            />
             <div className="absolute inset-0 bg-primary-container/20 group-hover:bg-primary-container/40 transition-colors"></div>
             <div className="absolute inset-0 p-10 flex flex-col justify-end">
               <span className="font-body text-[10px] text-white/80 uppercase tracking-widest mb-2 block">Membership</span>
@@ -136,7 +142,12 @@ const Membership = ({ onJoinClick }) => {
             transition={{ duration: 1, ease: [0.8, 0, 0.2, 1], delay: 0.2 }}
             className="relative h-[350px] overflow-hidden group cursor-pointer border-4 border-white view-target"
           >
-            <img src="/assets/images/class-combat.jpg" className="w-full h-full object-cover grayscale brightness-50 group-hover:scale-110 transition-transform duration-700" alt="Opening Hours" />
+            <OptimizedImage 
+              src="/assets/images/class-combat.webp"
+              fallback="/assets/images/class-combat.jpg"
+              alt="Opening Hours"
+              className="w-full h-full object-cover grayscale brightness-50 group-hover:scale-110 transition-transform duration-700" 
+            />
             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors"></div>
             <div className="absolute inset-0 p-10 flex flex-col justify-end">
               <span className="font-body text-[10px] text-white/80 uppercase tracking-widest mb-2 block">Opening Hours</span>

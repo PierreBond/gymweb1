@@ -88,7 +88,7 @@ const BecomeStronger = () => {
                 <h3 className="font-condensed text-xl text-black uppercase italic mb-2 tracking-tight group-hover:text-primary-container transition-colors">
                   {feature.title}
                 </h3>
-                <p className="font-body text-secondary text-sm leading-relaxed max-w-[250px]">
+                <p className="font-body text-neutral-600 text-sm leading-relaxed max-w-[250px]">
                   {feature.description}
                 </p>
               </div>
