@@ -61,7 +61,7 @@ const Header = ({ onJoinClick }) => {
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
-            className="fixed inset-0 bg-black/95 backdrop-blur-lg z-40 flex flex-col items-center justify-center gap-8 md:gap-12"
+            className="fixed inset-0 bg-black/95 backdrop-blur-lg z-40 flex flex-col items-center justify-center gap-8 md:gap-12 overflow-y-auto py-12"
           >
             <a onClick={() => setIsMobileMenuOpen(false)} href="#classes">
               <KineticTypography text="The Disciplines" className="text-white font-condensed text-3xl uppercase tracking-widest hover:text-primary-container transition-colors" />

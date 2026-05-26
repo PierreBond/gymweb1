@@ -56,7 +56,7 @@ const BecomeStronger = () => {
           </motion.span>
           <KineticTypography 
             text="#BECOMESTRONGER"
-            className="font-condensed text-5xl md:text-8xl text-black uppercase italic tracking-tighter"
+            className="font-condensed text-4xl sm:text-6xl md:text-8xl text-black uppercase italic tracking-tighter"
           />
         </div>
 

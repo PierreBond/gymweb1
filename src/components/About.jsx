@@ -23,7 +23,7 @@ const About = ({ onJoinClick }) => {
             text="For Session Booking"
             className="font-script text-black text-2xl md:text-4xl mb-2 transform -rotate-2"
           />
-          <h2 className="font-condensed text-5xl md:text-8xl lg:text-[100px] text-black leading-[0.9] uppercase italic tracking-tighter mb-4">
+          <h2 className="font-condensed text-4xl sm:text-5xl md:text-8xl lg:text-[100px] text-black leading-[0.9] uppercase italic tracking-tighter mb-4">
             BOOK A <br className="md:hidden" /> <span className="text-primary-container">CONSULT</span>
           </h2>
           <KineticTypography 
