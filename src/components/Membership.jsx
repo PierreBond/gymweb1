@@ -1,58 +1,25 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import KineticTypography from './KineticTypography';
-import { useMagnetic } from '../hooks/useMagnetic';
+import MagneticButton from './MagneticButton';
 import OptimizedImage from './OptimizedImage';
+import { useModal } from '../context/ModalContext';
+import { membershipPlans } from '../data/membershipPlans';
 
-const MagneticButton = ({ children, onClick, className }) => {
-  const { ref, x, y, handleMouseMove, handleMouseLeave } = useMagnetic();
-  return (
-    <motion.div
-      ref={ref}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      onClick={onClick}
-      style={{ x, y }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
-};
+const Membership = () => {
+  const { openModal } = useModal();
 
-const membershipPlans = [
-  {
-    price: '$439',
-    title: '3 MONTHS MEMBERSHIP CARD',
-    description: 'FULL ACCESS TO ALL ELITE EQUIPMENT, CLASSES, AND RECOVERY ZONES. COMMIT TO THE GRIND.',
-    isPopular: false
-  },
-  {
-    price: '$169',
-    title: '10 CLASSES CARD',
-    description: 'FLEXIBLE ACCESS FOR THE BUSY ATHLETE. PUSH YOUR LIMITS ON YOUR OWN SCHEDULE.',
-    isPopular: true
-  },
-  {
-    price: '$291',
-    title: 'SINGLE DROP IN',
-    description: 'NO EXCUSES. ONE DAY PASS TO EXPERIENCE TRUE HIGH-PERFORMANCE TRAINING.',
-    isPopular: false
-  }
-];
-
-const Membership = ({ onJoinClick }) => {
   return (
     <section className="py-24 bg-black text-white overflow-hidden" id="membership">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Header */}
+          {/* Header */}
         <div className="flex justify-between items-center border-b border-white/20 pb-8 mb-12">
           <KineticTypography 
             text="CHOOSE YOUR MEMBERSHIP"
             className="font-condensed text-4xl md:text-5xl text-white uppercase italic tracking-tighter"
             justifyClass="justify-start"
           />
-          <MagneticButton className="w-12 h-12 bg-primary-container rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform join-target">
+          <MagneticButton onClick={openModal} className="w-12 h-12 bg-primary-container rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform join-target">
             <span className="material-symbols-outlined text-white rotate-[-45deg] pointer-events-none">arrow_forward</span>
           </MagneticButton>
         </div>
@@ -115,7 +82,7 @@ const Membership = ({ onJoinClick }) => {
             viewport={{ once: true }}
             transition={{ duration: 1, ease: [0.8, 0, 0.2, 1] }}
             className="relative h-[350px] overflow-hidden group cursor-pointer border-4 border-primary-container join-target"
-            onClick={onJoinClick}
+            onClick={openModal}
           >
             <OptimizedImage 
               src="/assets/images/class-powerlifting.webp"

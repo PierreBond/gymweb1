@@ -1,7 +1,10 @@
 import React from 'react';
 import KineticTypography from './KineticTypography';
+import { useModal } from '../context/ModalContext';
 
-const Footer = ({ onJoinClick }) => {
+const Footer = () => {
+  const { openModal } = useModal();
+
   return (
     <footer className="relative bg-primary-container py-24 overflow-hidden">
       {/* Background Text Decor */}
@@ -35,7 +38,7 @@ const Footer = ({ onJoinClick }) => {
               </a>
             </div>
             <button
-              onClick={onJoinClick}
+              onClick={openModal}
               className="border-2 border-white text-white font-condensed text-xs uppercase tracking-[0.3em] px-8 py-2 hover:bg-white hover:text-primary-container transition-all"
             >
               Get In Touch

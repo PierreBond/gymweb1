@@ -1,6 +1,50 @@
 @import "tailwindcss";
 @config "../tailwind.config.js";
 
+/* Self-hosted fonts */
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Anton-latin.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/Caveat-latin.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Inter-latin.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/Inter-latin.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Oswald-latin.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/Oswald-latin.woff2') format('woff2');
+}
+
 @layer utilities {
   .clip-slant {
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
@@ -64,13 +108,4 @@ body::after {
   scrollbar-color: #D90429 #000000;
 }
 
-/* Hide system cursor on desktop for custom cursor experience */
-@media (min-width: 768px) {
-  body {
-    cursor: none;
-  }
-  
-  a, button, [role="button"], .interactive {
-    cursor: none;
-  }
-}
+

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { ModalProvider } from './context/ModalContext';
 import AnnouncementBar from './components/AnnouncementBar';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -16,33 +17,30 @@ import FeaturesGrid from './components/FeaturesGrid';
 const SignupModal = React.lazy(() => import('./components/SignupModal'));
 
 function App() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
-
   return (
-    <div className="bg-black text-white font-body overflow-x-hidden min-h-screen selection:bg-primary-container selection:text-white pt-[30px]">
-      <CustomCursor />
-      <AnnouncementBar />
-      <Header onJoinClick={openModal} />
-      <main>
-        <Hero onJoinClick={openModal} />
-        <WhyJoinUs />
-        <BecomeStronger />
-        <FeaturesGrid />
-        <About onJoinClick={openModal} />
-        <ClassesGrid />
-        <BannerStrip />
-        <Membership onJoinClick={openModal} />
-        <InstagramGrid />
-      </main>
-      <Footer onJoinClick={openModal} />
-      
-      <React.Suspense fallback={null}>
-        <SignupModal isOpen={isModalOpen} onClose={closeModal} />
-      </React.Suspense>
-    </div>
+    <ModalProvider>
+      <div className="bg-black text-white font-body overflow-x-hidden min-h-screen selection:bg-primary-container selection:text-white pt-[30px]">
+        <CustomCursor />
+        <AnnouncementBar />
+        <Header />
+        <main>
+          <Hero />
+          <WhyJoinUs />
+          <BecomeStronger />
+          <FeaturesGrid />
+          <About />
+          <ClassesGrid />
+          <BannerStrip />
+          <Membership />
+          <InstagramGrid />
+        </main>
+        <Footer />
+        
+        <React.Suspense fallback={null}>
+          <SignupModal />
+        </React.Suspense>
+      </div>
+    </ModalProvider>
   );
 }
 

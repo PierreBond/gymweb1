@@ -2,8 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useMagnetic } from '../hooks/useMagnetic';
 import KineticTypography from './KineticTypography';
+import { useModal } from '../context/ModalContext';
 
-const Hero = ({ onJoinClick }) => {
+const Hero = () => {
+  const { openModal } = useModal();
   const { ref, x, y, handleMouseMove, handleMouseLeave } = useMagnetic();
 
   return (
@@ -14,6 +16,7 @@ const Hero = ({ onJoinClick }) => {
         loop
         muted
         playsInline
+        preload="metadata"
         className="absolute inset-0 w-full h-full object-cover opacity-60 grayscale"
         aria-label="High performance athlete training"
       >
@@ -53,7 +56,7 @@ const Hero = ({ onJoinClick }) => {
               ref={ref}
               onMouseMove={handleMouseMove}
               onMouseLeave={handleMouseLeave}
-              onClick={onJoinClick}
+              onClick={openModal}
               className="bg-white text-black font-condensed text-xl md:text-2xl px-8 md:px-12 py-3 md:py-4 hover:bg-primary-container hover:text-white transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.2)] animate-bounce-subtle join-target"
             >
               LEARN MORE

@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 
 const KineticTypography = ({ text, className = "", justifyClass = "justify-center" }) => {
   const shouldReduceMotion = useReducedMotion();
+
+  // Memoize text splitting to avoid re-computation on every render
+  const words = useMemo(() => text.split(' '), [text]);
 
   // Animation variants
   const containerVariants = {
@@ -28,9 +31,6 @@ const KineticTypography = ({ text, className = "", justifyClass = "justify-cente
       }
     }
   };
-
-  // Split text into words, then words into characters
-  const words = text.split(' ');
 
   return (
     <div className={`relative ${className}`}>

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import KineticTypography from './KineticTypography';
+import { useModal } from '../context/ModalContext';
 
-const Header = ({ onJoinClick }) => {
+const Header = () => {
+  const { openModal } = useModal();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -36,7 +38,7 @@ const Header = ({ onJoinClick }) => {
         {/* Right Action */}
         <div className="hidden md:block">
           <button
-            onClick={onJoinClick}
+            onClick={openModal}
             className="border border-white/30 text-white font-condensed text-xs uppercase tracking-[0.3em] px-6 py-2 hover:bg-white hover:text-black transition-all duration-300"
           >
             Get Started
@@ -76,7 +78,7 @@ const Header = ({ onJoinClick }) => {
               <KineticTypography text="Join Us" className="text-white font-condensed text-3xl uppercase tracking-widest hover:text-primary-container transition-colors" />
             </a>
             <button
-              onClick={() => { setIsMobileMenuOpen(false); onJoinClick(); }}
+              onClick={() => { setIsMobileMenuOpen(false); openModal(); }}
               className="mt-8 bg-primary-container text-white font-condensed text-2xl uppercase tracking-widest px-12 py-4"
             >
               GET STARTED

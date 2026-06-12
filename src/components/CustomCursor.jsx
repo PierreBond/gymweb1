@@ -17,12 +17,27 @@ const CustomCursor = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
+      const mobile = window.innerWidth < 768;
+      setIsMobile(mobile);
+      if (mobile) {
+        document.body.style.cursor = '';
+      }
     };
     handleResize();
     window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      document.body.style.cursor = '';
+    };
   }, []);
+
+  useEffect(() => {
+    if (isMobile) {
+      document.body.style.cursor = '';
+    } else {
+      document.body.style.cursor = 'none';
+    }
+  }, [isMobile]);
 
   useEffect(() => {
     let animationFrameId;

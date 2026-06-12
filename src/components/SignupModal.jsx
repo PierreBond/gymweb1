@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useModal } from '../context/ModalContext';
 
-const SignupModal = ({ isOpen, onClose }) => {
+const SignupModal = () => {
+  const { isModalOpen, closeModal: onClose } = useModal();
+  const isOpen = isModalOpen;
   const [formData, setFormData] = useState({ name: '', email: '', phone: '' });
   const [errors, setErrors] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
