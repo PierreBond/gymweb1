@@ -1,0 +1,1 @@
+import{n as e,s as t,t as n}from"./jsx-runtime-2UHhqg_S.js";var r=t(e(),1),i=n(),a=({src:e,fallback:t,alt:n,className:a,...o})=>{let[s,c]=(0,r.useState)(!1);return(0,i.jsx)(`img`,{src:s?t:e,onError:()=>{s||c(!0)},alt:n,className:a,...o},e)};export{a as t};

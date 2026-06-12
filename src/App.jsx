@@ -1,19 +1,19 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { ModalProvider } from './context/ModalContext';
 import AnnouncementBar from './components/AnnouncementBar';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import About from './components/About';
-import ClassesGrid from './components/ClassesGrid';
-import BannerStrip from './components/BannerStrip';
-import InstagramGrid from './components/InstagramGrid';
-import WhyJoinUs from './components/WhyJoinUs';
-import Membership from './components/Membership';
-import BecomeStronger from './components/BecomeStronger';
 import CustomCursor from './components/CustomCursor';
-import Footer from './components/Footer';
-import FeaturesGrid from './components/FeaturesGrid';
 
+const WhyJoinUs = React.lazy(() => import('./components/WhyJoinUs'));
+const BecomeStronger = React.lazy(() => import('./components/BecomeStronger'));
+const FeaturesGrid = React.lazy(() => import('./components/FeaturesGrid'));
+const About = React.lazy(() => import('./components/About'));
+const ClassesGrid = React.lazy(() => import('./components/ClassesGrid'));
+const BannerStrip = React.lazy(() => import('./components/BannerStrip'));
+const Membership = React.lazy(() => import('./components/Membership'));
+const InstagramGrid = React.lazy(() => import('./components/InstagramGrid'));
+const Footer = React.lazy(() => import('./components/Footer'));
 const SignupModal = React.lazy(() => import('./components/SignupModal'));
 
 function App() {
@@ -25,20 +25,21 @@ function App() {
         <Header />
         <main>
           <Hero />
-          <WhyJoinUs />
-          <BecomeStronger />
-          <FeaturesGrid />
-          <About />
-          <ClassesGrid />
-          <BannerStrip />
-          <Membership />
-          <InstagramGrid />
+          <Suspense fallback={null}>
+            <WhyJoinUs />
+            <BecomeStronger />
+            <FeaturesGrid />
+            <About />
+            <ClassesGrid />
+            <BannerStrip />
+            <Membership />
+            <InstagramGrid />
+          </Suspense>
         </main>
-        <Footer />
-        
-        <React.Suspense fallback={null}>
+        <Suspense fallback={null}>
+          <Footer />
           <SignupModal />
-        </React.Suspense>
+        </Suspense>
       </div>
     </ModalProvider>
   );
