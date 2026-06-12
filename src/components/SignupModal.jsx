@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useForm, ValidationError } from '@formspree/react';
 import { useModal } from '../context/ModalContext';
 
 const SignupModal = () => {
@@ -7,7 +8,7 @@ const SignupModal = () => {
   const isOpen = isModalOpen;
   const [formData, setFormData] = useState({ name: '', email: '', phone: '' });
   const [errors, setErrors] = useState({});
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [state, handleSubmit] = useForm('meewpapl');
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -35,17 +36,12 @@ const SignupModal = () => {
     return newErrors;
   };
 
-  const handleSubmit = (e) => {
+  const onSubmit = (e) => {
     e.preventDefault();
     const newErrors = validateForm();
     if (Object.keys(newErrors).length === 0) {
-      setIsSubmitted(true);
-      // Simulate API call
-      setTimeout(() => {
-        setIsSubmitted(false);
-        setFormData({ name: '', email: '', phone: '' });
-        onClose();
-      }, 3000);
+      setErrors({});
+      handleSubmit(e);
     } else {
       setErrors(newErrors);
     }
@@ -57,6 +53,9 @@ const SignupModal = () => {
       setErrors({ ...errors, [e.target.name]: '' });
     }
   };
+
+  const inputClasses = (field) =>
+    `w-full bg-black/5 border ${errors[field] || state.errors?.some((err) => err.field === field) ? 'border-primary-container' : 'border-black/20'} focus:border-primary-container outline-none px-4 py-3 text-black transition-colors font-body text-sm`;
 
   return (
     <AnimatePresence>
@@ -75,7 +74,7 @@ const SignupModal = () => {
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             className="relative w-full max-w-md bg-white border-[12px] border-primary-container p-8 shadow-2xl overflow-y-auto max-h-[90vh]"
           >
-            {isSubmitted ? (
+            {state.succeeded ? (
               <div className="text-center py-8">
                 <motion.span
                   initial={{ scale: 0 }}
@@ -96,8 +95,8 @@ const SignupModal = () => {
                   </button>
                 </div>
                 <p className="text-black/50 font-body text-[10px] mb-6 uppercase tracking-widest font-bold">Enter your details to start your journey.</p>
-                
-                <form onSubmit={handleSubmit} className="space-y-4">
+
+                <form onSubmit={onSubmit} className="space-y-4">
                   <div>
                     <label className="block text-[10px] font-bold text-black uppercase mb-1 ml-1">Full Name</label>
                     <input
@@ -106,11 +105,12 @@ const SignupModal = () => {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="e.g. John Doe"
-                      className={`w-full bg-black/5 border ${errors.name ? 'border-primary-container' : 'border-black/20'} focus:border-primary-container outline-none px-4 py-3 text-black transition-colors font-body text-sm`}
+                      className={inputClasses('name')}
                     />
                     {errors.name && <p className="text-primary-container text-[10px] mt-1 font-bold uppercase">{errors.name}</p>}
+                    <ValidationError field="name" prefix="Name" errors={state.errors} className="text-primary-container text-[10px] mt-1 font-bold uppercase" />
                   </div>
-                  
+
                   <div>
                     <label className="block text-[10px] font-bold text-black uppercase mb-1 ml-1">Email Address</label>
                     <input
@@ -119,11 +119,12 @@ const SignupModal = () => {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="john@example.com"
-                      className={`w-full bg-black/5 border ${errors.email ? 'border-primary-container' : 'border-black/20'} focus:border-primary-container outline-none px-4 py-3 text-black transition-colors font-body text-sm`}
+                      className={inputClasses('email')}
                     />
                     {errors.email && <p className="text-primary-container text-[10px] mt-1 font-bold uppercase">{errors.email}</p>}
+                    <ValidationError field="email" prefix="Email" errors={state.errors} className="text-primary-container text-[10px] mt-1 font-bold uppercase" />
                   </div>
-                  
+
                   <div>
                     <label className="block text-[10px] font-bold text-black uppercase mb-1 ml-1">Phone Number</label>
                     <input
@@ -132,16 +133,20 @@ const SignupModal = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="+1 (555) 000-0000"
-                      className={`w-full bg-black/5 border ${errors.phone ? 'border-primary-container' : 'border-black/20'} focus:border-primary-container outline-none px-4 py-3 text-black transition-colors font-body text-sm`}
+                      className={inputClasses('phone')}
                     />
                     {errors.phone && <p className="text-primary-container text-[10px] mt-1 font-bold uppercase">{errors.phone}</p>}
+                    <ValidationError field="phone" prefix="Phone" errors={state.errors} className="text-primary-container text-[10px] mt-1 font-bold uppercase" />
                   </div>
-                  
+
+                  <ValidationError errors={state.errors} className="text-primary-container text-[10px] mt-2 font-bold uppercase" />
+
                   <button
                     type="submit"
-                    className="w-full mt-6 bg-black text-white font-condensed text-xl uppercase py-4 hover:bg-primary-container transition-all duration-300 active:scale-95 shadow-lg"
+                    disabled={state.submitting}
+                    className="w-full mt-6 bg-black text-white font-condensed text-xl uppercase py-4 hover:bg-primary-container transition-all duration-300 active:scale-95 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    SUBMIT REGISTRATION
+                    {state.submitting ? 'SUBMITTING...' : 'SUBMIT REGISTRATION'}
                   </button>
                 </form>
               </>
